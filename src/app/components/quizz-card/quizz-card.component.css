@@ -1,0 +1,32 @@
+.custom-button {
+  background-color: #1f7bad;
+  color: #ffffff;
+  border:none;
+}
+
+.custom-button:hover {
+  background-color: rgb(23, 86, 148);
+  border-color: #10276b;
+}
+
+.custom-text {
+  color: #ffffff;
+}
+
+
+.custom-card {
+  border-radius: 10px;
+  transition: 0.5s all;
+  background-color: rgba(36, 125, 197, 0.1);
+  border: none;
+}
+
+.custom-card :hover {
+  transform: scale(1.005);
+}
+
+h2 {
+  color: #4762b0;
+}
+
+

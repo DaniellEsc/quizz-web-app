@@ -1,0 +1,25 @@
+<div class="container">
+  <div  *ngIf="questions.length === 0">
+    <h2 class="p-5 fw-light text-center">Loading......</h2>
+  </div>
+  <div class="row p-5 justify-content-center">
+    <div class="col-sm-6">
+      <div class="card custom-card">
+        <div class="card-body">
+          <div *ngIf="questions.length > 0 && preguntaActual < questions.length">
+            <h2 class="fw-light text-center"> Question {{ preguntaActual + 1 }}</h2>
+            <p class="text-center" [innerHTML]=questions[preguntaActual].question > </p>
+              <button class="btn p-2 mb-3 custom-button btn-primary col-sm-12" *ngFor="let answer of randomQuestion" (click)="handleAnswerClick(answer)">
+                {{ answer }}
+              </button>
+          </div>
+          <div *ngIf="preguntaActual >= questions.length">
+            <h1>Completado</h1>
+            <p>Your score is {{ score }} / {{ questions.length }}</p>
+            <button (click)="restaurarQuizz()">Restablecer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,4 @@
+nav {
+  background-color: rgba(19, 66, 104, 0.5);
+  border-bottom: 10px solid linear-gradient(to bottom, rgba(0, 108, 132, 0.1), transparent 70%);
+}
