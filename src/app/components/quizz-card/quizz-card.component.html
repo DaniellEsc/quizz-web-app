@@ -9,14 +9,14 @@
           <div *ngIf="questions.length > 0 && preguntaActual < questions.length">
             <h2 class="fw-light text-center"> Question {{ preguntaActual + 1 }}</h2>
             <p class="text-center" [innerHTML]=questions[preguntaActual].question > </p>
-              <button class="btn p-2 mb-3 custom-button btn-primary col-sm-12" *ngFor="let answer of randomQuestion" (click)="handleAnswerClick(answer)">
+              <button class="btn p-2 mb-3 custom-button btn-primary col-12" *ngFor="let answer of randomQuestion" (click)="handleAnswerClick(answer)">
                 {{ answer }}
               </button>
           </div>
           <div *ngIf="preguntaActual >= questions.length">
-            <h1>Completado</h1>
+            <h1 class="fw-light">Completado</h1>
             <p>Your score is {{ score }} / {{ questions.length }}</p>
-            <button (click)="restaurarQuizz()">Restablecer</button>
+            <button class="btn btn-primary" (click)="restaurarQuizz()">Restablecer</button>
           </div>
         </div>
       </div>
